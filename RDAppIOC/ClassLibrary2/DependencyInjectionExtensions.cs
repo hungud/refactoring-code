@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ClassLibrary1
+namespace ClassLibrary2
 {
     public static class DependencyInjectionExtensions
     {
-        public static IServiceCollection AddClassLib1(this IServiceCollection serviceCollection)
+        public static IServiceCollection AddClassLib2(this IServiceCollection serviceCollection)
         {
 
-            serviceCollection.AddTransient<IClass1, Class1N>();
-            serviceCollection.AddTransient<IClass2, Class2>();
-            serviceCollection.AddTransient<IClass3, Class3>();
+            serviceCollection.AddTransient<IClass1, Class1>();
             serviceCollection.AddMediatR(Assembly.GetExecutingAssembly());
 
             return serviceCollection;
